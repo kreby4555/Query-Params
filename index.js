@@ -7,9 +7,9 @@ const app = express()
 
 */
 
-app.get('/users', (request, response) => {
-    const{name, age} = request.query
-    return response.json({name, age})
+app.get('/users/:id', (request, response) => {
+    const{ id } = request.params
+    return response.json({id})
 })
 
 app.listen(3001, 
